@@ -3,15 +3,16 @@
 
 # Voraussetzungen
 Windows + Lauffähige Python3 Installation
-für das Python Skript werden folgende Pip Module benötigt:
+für das Python Keyloggerskript werden folgende Pip Module benötigt:
 - keyboard
 - pywin32
+für das Serverskript werden keine gesonderten Pipmodule benötigt.
 
 # Benutzung
 Der Keylogger steht in 3 Formaten bereit: 
 Das reguläre .py Skript läuft in der cmd und ermöglicht das Nachverfolgen der Outputs.
 Das .pyw Skript ist vom Code identisch mit dem .py Skript. Mit dem Unterschied, dass der Code ausgeführt wird ohne dass das Kommandozeilenfenster aufspringt.
-Im Ordner keylogger.zip ist der Keylogger als Exe enthalten. Das Passwort zum entpacken ist "123". Der Keylogger wird vom Windows Defender als Trojaner erkannt, die Heuristiken funktionieren also. Die Exe wurde mit Hilfe von Pyinstaller erstellt und ist eine gebundelte Umgebung in dem alle Python notwendigen Funktionen und Abhängigkeiten enthalten sind.
+Im Ordner keylogger.zip ist der Keylogger als Exe enthalten. Das Passwort zum entpacken ist "123". Der Keylogger wird vom Windows Defender als Trojaner erkannt, die Heuristiken funktionieren also. Die Exe wurde mit Hilfe von Pyinstaller erstellt und ist eine gebundelte Umgebung in dem alle Python notwendigen Funktionen und Abhängigkeiten enthalten sind. das hießt die Exe ist aktuell nur über die Kommandozeile benutzbar.
 
 # Workflow
 Das Skript beinhaltet folgenden Workflow:
