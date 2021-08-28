@@ -1,0 +1,6 @@
+Cython==0.29.24
+keyboard==0.13.5
+pywin32==301
+setuptools==57.4.0
+tqdm==4.62.2
+winshell==0.6
